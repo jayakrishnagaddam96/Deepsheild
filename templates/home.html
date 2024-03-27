@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Deep Sheild</title>
+    <style>
+      #image{
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        
+      }
+      .upgrade-item {
+      border-bottom: 2px solid #ccc;
+    }
+      #content{
+        padding: 0;
+      box-sizing: border-box;
+       
+      }
+      #headerid{
+          padding-bottom: 2%;
+          position: relative;
+          left: -2%;
+        }
+      body{
+        margin: 0;
+      padding: 0;
+      padding-top: 3.5%;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden; 
+      }
+      .image-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Adjust the gap between images */
+    margin-top: 20px; /* Add margin to the top */
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+  }
+
+  .image-row img {
+    width: 330px;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 8px; 
+    transition: transform 0.3s ease;
+  }
+
+  .image-row img:hover {
+    transform: scale(1.1); 
+  }
+
+    </style>
+    {%include 'homenav.html'%}
+  </head>
+  {%include 'bootstrap.html'%}
+  <body>
+    <img id="image" src="static\aipic.jpg" alt="pic">
+    <div class="content lead">
+      <div class="bg-white text-lg-start mt-0">
+        <div class="row">
+          <div class="upgrade-item mt-4 mb-4 ">
+            <div class="upgrade-item">
+              <ul class="row" style="position: relative; left:2%;">
+                
+                <li style="position: relative;left: 2%;" id="aid" class="col">Data Collection</li>
+                <li style="position: relative;left: 2%;"  id="aid" class="col">Extraction</li>
+                <li style="position: relative;left: 1%;" id="aid" class="col">Artifact</li>
+                <li id="aid" class="col">Metadata</li>
+                <li id="aid" class="col">Ensemble Methods</li>
+                <li style="position: relative;left: 2%;"id="aid" class="col">Deepfake Detection</li>
+
+                
+            </ul>
+            
+            </div>
+          </div>
+          <div class="col">
+                    <p class="lead" style="font-size: 24px; position: relative; top: 40%; left: 20%;">What exactly is a Deepfake?</p>
+          </div>
+           <div class="col">
+               <p class="text-center" style="position: relative; right: 10%;">A deep fake refers to a highly sophisticated form of synthetic media generated 
+                through deep learning techniques, particularly using artificial intelligence algorithms 
+                known as neural networks. These algorithms are trained on vast amounts of data, often comprising
+                 images and videos of a particular individual. Deep fakes utilize this training to superimpose or
+                  replace the likeness of one person onto another in video or image content, creating convincing and
+                   often indistinguishable simulations of events that never occurred or portrayals of individuals saying
+                    or doing things they never did. This technology has raised concerns due to its potential to spread
+                     misinformation, 
+                manipulate public opinion, and facilitate various forms of fraud or exploitation.</p>
+           </div>
+        </div>
+        <div class="bg-light text-dark text-lg-start mt-0 p-4 rounded-lg shadow">
+          <h2 class="text-center fw-bold mb-4">Example Deep Fakes</h2>
+        <div class="image-row mb-4">
+          <img src="static\df1.jpeg" alt="Pipeline" class="rounded">
+          <img src="static\df2.jpg" alt="Transformers" class="rounded">
+          <img src="static\df3.jpg" alt="Flask" class="rounded">
+          <img src="static\df4.jpg" alt="MongoDB" class="rounded">
+        </div>
+        </div>
+
+         
+
+
+
+        
+
+      </div>
+      <div class="mt-4 text-center">
+        <h2 class="text-center fw-bold">Detect a Deepfake..</h2>
+        <div class="mt-2" style="position: relative; left: -1%;">Select your file format</div>
+      </div>
+      {%include 'contents.html'%}
+
+      <div class="content">
+        <div class=" row bg-white text-dark text-lg-start mt-0 p-4 rounded-lg shadow">
+          <div class="col">
+            <p class="lead" style="font-size: 24px; position: relative; top: 40%; left: 20%;">How does Deepsheild Works?</p>
+  </div>
+   <div class="col">
+       <p class="lead text-center" style="position: relative; right: 10%;">Our deepfake detection model employs advanced 
+        deep learning techniques to accurately differentiate between genuine and manipulated facial images. By integrating 
+        the MTCNN for rapid and precise facial detection and the InceptionResnetV1 architecture pretrained on the VGGFace2
+         dataset for detailed feature extraction, our model effectively identifies subtle cues indicative of deepfake 
+         manipulation. Operating through a binary classification process, it swiftly determines whether an input image
+          contains a real or fake face. Implemented using PyTorch, our model ensures efficient computation across various 
+          hardware configurations. It has been meticulously fine-tuned on extensive datasets to generalize well to diverse
+           deepfake variations and adapt to evolving synthetic media threats. With our solution, users can confidently verify
+         the authenticity of facial images, mitigating the dissemination of misinformation and manipulation online.</p>
+   </div>
+
+        </div>
+        
+      </div>
+
+
+
+
+    </div>
+    <div class="row bg-light text-dark text-lg-start mt-0 p-4 rounded-lg shadow">
+      <h2 id="headerid" class="fw-bold text-center mb-4">Deepsheild Process :</h2>
+      <div class="mt-0 col text-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-search mb-4" viewBox="0 0 16 16">
+          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+        </svg>
+          <h2>Step 1: Select file format</h2>
+          <p class="lead">Choose a video or Picture file that you want to verify for authenticity. 
+            For best results, we highly recommend choosing a Picture, video or audio file
+             that does not have any special edits or special effects.</p>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col" style="position: relative; right: 13%;">
+        <svg style="position: relative; left:30%;" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-mouse mb-4" viewBox="0 0 16 16">
+          <path d="M8 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 3m4 8a4 4 0 0 1-8 0V5a4 4 0 1 1 8 0zM8 0a5 5 0 0 0-5 5v6a5 5 0 0 0 10 0V5a5 5 0 0 0-5-5"/>
+        </svg>
+          <h2>Step 2:Click on Predict</h2>
+          <p class="lead">After carefully choosing the file and uploading it to Deepsheild, Now click on detect button for 
+            Deepfake detection and wait for results...Remember to remove effects for better prediction and analysis from Deepsheild
+          </p>
+      </div>
+      
+      <div class="col">
+        <svg style="position: relative; left:30%; top:-4%" xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="mb-0 bi bi-check" viewBox="0 0 16 16">
+          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+        </svg>
+          <h2>Results</h2>
+          <p class="lead">The prediction of deep fake, Heatmap, Metadata and Probability score will be displayed.
+            Now you can observe whether the uploaded file is deepfake or not.
+            
+          </p>
+          <p class="text-center lead">Thanks to Deepsheild...</p>
+      </div>
+
+    </div>
+    {%include 'footer.html'%}
+  </body>
+</html>
